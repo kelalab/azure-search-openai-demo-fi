@@ -4,6 +4,8 @@ import { SparkleFilled } from "@fluentui/react-icons";
 
 import styles from "./Chat.module.css";
 
+import botlogo from "../../assets/Tekoaly_2_sininen.png";
+
 import { chatApi, Approaches, AskResponse, ChatRequest, ChatTurn } from "../../api";
 import { Answer, AnswerError, AnswerLoading } from "../../components/Answer";
 import { QuestionInput } from "../../components/QuestionInput";
@@ -134,10 +136,13 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>OpenAI terveydenhuollossa</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Kysy tai keskustele Käypä hoito-suosituksen aiheista:</h2>
-                            <h6 className={styles.chatEmptyStateSubtitle}>Itselääkitys, keuhkoahtaumatauti, keuhkosyöpä, siedätyshoito, niskakipu, kohdunulkoinen raskaus, päänsärky, migreeni, alkoholiongelmaisen hoito, epileptinen kohtaus, lonkkamurtuma, diapeettinen retinopatia, ADHD, liikunta, atooppinen ekseema, lasten alahengitystieinfektiot, syömishäiriöt, kipu, sydämen vajaatoiminta, hampaan paikkaushoito </h6>
+                            <img src={botlogo} alt="Chatbot logo" aria-label="Chatbot logo" aria-hidden="true" width="120px" height="120px" />
+                            <h1 className={styles.chatEmptyStateTitle}>OpenAI "Etuusviidakon selittäjä"</h1>
+                            <h2 className={styles.chatEmptyStateSubtitle}>Kysy tai keskustele Kelan etuusohjeista aiheista:</h2>
+                            <h3 className={styles.chatEmptyStateSubtitle}>
+                                Asumisen, opiskelijoiden ja asevelvollisten etuudet. Lisäksi myös Kelan terminologinen sanasto on käytettävissä termien
+                                määritelmien selittämiseen.
+                            </h3>
 
                             <ExampleList onExampleClicked={onExampleClicked} />
                         </div>
@@ -183,7 +188,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Kirjoita kysymys (esim Miten hoidetaan lonkkamurtumaa?)"
+                            placeholder="Kirjoita kysymys (esim Mitä tarkoittaa ruokakunta?)"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />

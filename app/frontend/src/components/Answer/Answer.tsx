@@ -40,16 +40,16 @@ export const Answer = ({
                         <IconButton
                             style={{ color: "black" }}
                             iconProps={{ iconName: "Lightbulb" }}
-                            title="Show thought process"
-                            ariaLabel="Show thought process"
+                            title="Näytä ajatteluprosessi (tekninen)"
+                            ariaLabel="Näytä ajatteluprosessi (tekninen)"
                             onClick={() => onThoughtProcessClicked()}
                             disabled={!answer.thoughts}
                         />
                         <IconButton
                             style={{ color: "black" }}
                             iconProps={{ iconName: "ClipboardList" }}
-                            title="Show supporting content"
-                            ariaLabel="Show supporting content"
+                            title="Näytä tukevat lähdesisällöt"
+                            ariaLabel="Näytä tukevat lähdesisällöt"
                             onClick={() => onSupportingContentClicked()}
                             disabled={!answer.data_points.length}
                         />
@@ -64,7 +64,7 @@ export const Answer = ({
             {!!parsedAnswer.citations.length && (
                 <Stack.Item>
                     <Stack horizontal wrap tokens={{ childrenGap: 5 }}>
-                        <span className={styles.citationLearnMore}>Citations:</span>
+                        <span className={styles.citationLearnMore}>Viittaukset: </span>
                         {parsedAnswer.citations.map((x, i) => {
                             const path = getCitationFilePath(x);
                             return (
@@ -80,7 +80,7 @@ export const Answer = ({
             {!!parsedAnswer.followupQuestions.length && showFollowupQuestions && onFollowupQuestionClicked && (
                 <Stack.Item>
                     <Stack horizontal wrap className={`${!!parsedAnswer.citations.length ? styles.followupQuestionsList : ""}`} tokens={{ childrenGap: 6 }}>
-                        <span className={styles.followupQuestionLearnMore}>Follow-up questions:</span>
+                        <span className={styles.followupQuestionLearnMore}>Ehdotettuja jatkokysymyksiä:</span>
                         {parsedAnswer.followupQuestions.map((x, i) => {
                             return (
                                 <a key={i} className={styles.followupQuestion} title={x} onClick={() => onFollowupQuestionClicked(x)}>

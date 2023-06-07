@@ -9,11 +9,17 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "Lapsi on allerginen timoteille, onko siihen olemassa siedätyshoitoa?",
-        value: "Lapsi on allerginen timoteille, onko siihen olemassa siedätyshoitoa?"
+        text: "Missä tilanteissa samassa asunnossa asuvat eivät kuulu samaan ruokakuntaan?",
+        value: "Missä tilanteissa samassa asunnossa asuvat eivät kuulu samaan ruokakuntaan?"
     },
-    { text: "Epilapsiakohtaus on kestänyt 20 minuuttia, mitä riskejä siihen liittyy?", value: "Epilapsiakohtaus on kestänyt 20 minuuttia, mitä riskejä siihen liittyy?" },
-    { text: "Mies juo viikossa 30 tuopillista olutta, onko se liikaa?", value: "Mies juo viikossa 30 tuopillista olutta, onko se liikaa?" }
+    {
+        text: "Pitääkö yleinen asumistuki lakkauttaa ruokakunnalta, jonka ainoa jäsen kuolee?",
+        value: "Pitääkö yleinen asumistuki lakkauttaa yhden hengen ruokakunnalta, jos ruokakunnan ainoa jäsen kuolee?"
+    },
+    {
+        text: "Voiko Ahvenanmaalla asuva opiskelija saada yleistä asumistukea?",
+        value: "Voiko Ahvenanmaalla asuva opiskelija saada yleistä asumistukea?"
+    }
 ];
 
 interface Props {
