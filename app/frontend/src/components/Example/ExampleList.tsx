@@ -17,8 +17,8 @@ const EXAMPLES: ExampleModel[] = [
         value: "Pitääkö yleinen asumistuki lakkauttaa yhden hengen ruokakunnalta, jos ruokakunnan ainoa jäsen kuolee?"
     },
     {
-        text: "Voiko Ahvenanmaalla asuva opiskelija saada yleistä asumistukea?",
-        value: "Voiko Ahvenanmaalla asuva opiskelija saada yleistä asumistukea?"
+        text: "Tarvitseeko alle 18-vuotiaan lapsen tuloja huomioida toimeentulotuessa? ",
+        value: "tarvitseeko alle 18-vuotiaan lapsen tuloja huomioida toimeentulotuessa?"
     }
 ];
 

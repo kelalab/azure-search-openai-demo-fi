@@ -140,8 +140,10 @@ const Chat = () => {
                             <h1 className={styles.chatEmptyStateTitle}>OpenAI "Etuusviidakon selittäjä"</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>Kysy tai keskustele Kelan etuusohjeista aiheista:</h2>
                             <h3 className={styles.chatEmptyStateSubtitle}>
-                                Asumisen, opiskelijoiden ja asevelvollisten etuudet. Lisäksi myös Kelan terminologinen sanasto on käytettävissä termien
-                                määritelmien selittämiseen.
+                                Perustoimeentulotuen tulojen ja menojen huomioimisesta, asumisen, opiskelijoiden ja asevelvollisten etuuksista.
+                            </h3>
+                            <h3 className={styles.chatEmptyStateSubtitle}>
+                                Lisäksi myös Kelan terminologinen sanasto on käytettävissä termien määritelmien selittämiseen.
                             </h3>
 
                             <ExampleList onExampleClicked={onExampleClicked} />
